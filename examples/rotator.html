@@ -1,0 +1,48 @@
+<html> 
+<head>
+<style type="text/css">
+body {
+   margin: 0;
+   overflow: hidden;
+}
+#rotator {
+    position:absolute;
+    left: 0px;
+    width: 100%;
+    top: 0px;
+    height: 100%;
+}
+</style>
+</head> 
+<body> 
+<iframe id="rotator" src="http://192.168.1.15/ifserviceislocal.html"></iframe>
+
+<script>
+// start when the page is loaded
+window.onload = function() {
+
+  var urls = [
+    "http://192.168.1.15/localradar.html",
+    "http://192.168.1.15/ifserviceislocal.html"
+  ];
+
+  var index = 1;
+  var el = document.getElementById("rotator");
+
+  setTimeout(function rotate() {
+
+    if ( index === urls.length ) {
+      index = 0;
+    }
+
+    el.src = urls[index];
+    index  = index + 1;
+
+    // continue rotating iframes
+    setTimeout(rotate, 60000);
+
+  }, 60000); // 1000ms = 1s
+};
+</script>
+</body> 
+</html>
