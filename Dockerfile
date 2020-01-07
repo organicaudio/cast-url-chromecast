@@ -8,4 +8,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD [ "sh", "-c", "catt -d $CASTDEVICE cast_site $SITE" ]
+CMD [ "sh", "-c", "catt $ARGUMENTS" ]
