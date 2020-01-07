@@ -2,7 +2,7 @@ The chromecast has a simplified version of chrome installed that can launch web 
 
 [Stavros Korokithakis](https://github.com/skorokithakis/catt) made a python package that sends a url, via the cast_site argument, to a chromecast device.
 
-This puts "catt cast_site" into an easy to launch format, All you need is docker installed, your chromecast IP(CASTDEVICE) and the site(SITE) you would like to display.
+use -e ARGUMENTS='arguments' 
 
 
 # catt-chromecast
